@@ -49,24 +49,16 @@
     <nav id="navmenu" class="navmenu">
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-car-front navicon"></i>Home</a></li>
-        <li><a href="#about"><i class="bi bi-file-earmark-text navicon"></i> Overview</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-        <li class="dropdown"><a href="#services"><i class="bi bi-menu-button navicon"></i> <span>Dashboard</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+        <li><a href="#about"><i class="bi bi-exclamation-circle navicon"></i> Problem Statement</a></li>
+        <li><a href="#stats"><i class="bi bi-file-earmark-text navicon"></i> Overview</a></li>
+        <li class="dropdown"><a href="#services"><i class="bi bi-bar-chart-line navicon"></i> <span>Dashboard</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
           <ul>
             <li><a href="portfolio-details.html">Buyers/Sellers</a></li>
-            <!-- <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-              <ul>
-                <li><a href="#">Deep Dropdown 1</a></li>
-                <li><a href="#">Deep Dropdown 2</a></li>
-                <li><a href="#">Deep Dropdown 3</a></li>
-                <li><a href="#">Deep Dropdown 4</a></li>
-                <li><a href="#">Deep Dropdown 5</a></li>
-              </ul>
-            </li> -->
             <li><a href="service-details.html">Car Dealers</a></li>
             <li><a href="starter-page.html">Government</a></li>
           </ul>
         </li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
       </ul>
     </nav>
 
@@ -91,7 +83,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
+        <h2>Problem Statement</h2>
         <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
       </div><!-- End Section Title -->
 
@@ -192,7 +184,12 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Dashboard</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        <p>Our group aims to develop an integrated COE Analytics Dashboard that provides comprehensive insights for stakeholders. Our primary objectives are :</p>
+          <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Identify how quota allocation impacts the market stability of COE in Singapore. By uncovering the impacts, the data can be used to discover key supply-demand dynamics.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Determine the patterns in car ownership duration, revalidation choices and deregistration rates to better understand their effects on COE availability..</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Track COE price fluctuations and their implications on ownership costs, providing stakeholders with actionable, data-driven insights to better support their decision making.</span></li>
+          </ul>  
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -200,27 +197,27 @@
         <div class="row gy-4">
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+            <div class="icon flex-shrink-0"><i class="bi bi-bag"></i></div>
             <div>
               <h4 class="title"><a href="service-details.html" class="stretched-link">Buyers/Sellers</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <p class="description">For buyers, uncertainty arises in deciding the right time to purchase a car, whether to revalidate an existing vehicle, and which COE category offers the best value for their budget. Sellers, on the other hand, struggle with fluctuating premiums that complicate the decision of when to sell in order to maximize value.</p>
             </div>
           </div>
           <!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+            <div class="icon flex-shrink-0"><i class="bi bi-person-vcard"></i></div>
             <div>
               <h4 class="title"><a href="service-details.html" class="stretched-link">Car Dealers</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <p class="description">Car dealers face difficulty anticipating demand for both new and used vehicles, as well as specific car models.</p>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+            <div class="icon flex-shrink-0"><i class="bi bi-bank"></i></div>
             <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">Government</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4 class="title"><a href="portfolio-details.html" class="stretched-link">Government</a></h4>
+              <p class="description">Government must continually monitor quota utilization, manage price volatility, and ensure long-term vehicle population control so that the system remains sustainable and equitable.</p>
             </div>
           </div><!-- End Service Item -->
         </div>
@@ -230,7 +227,7 @@
     </section><!-- /Services Section -->
 
     <!-- Skills Section -->
-    <section id="skills" class="skills section light-background">
+    <section id="skills" class="skills section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -667,7 +664,7 @@
 
       </div>
 
-    </section><!-- /Contact Section -->
+    </section>/Contact Section
 
   </main>
 
@@ -675,7 +672,7 @@
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">G2T3</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->

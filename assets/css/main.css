@@ -943,6 +943,24 @@ section,
   font-size: 14px;
 }
 
+.services ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.services ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.services ul i {
+  font-size: 20px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
