@@ -12,10 +12,11 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Poppins", sans-serif;
+  --heading-font: "Poppins", sans-serif; /* optional: make headings Poppins too */
+  --nav-font: "Poppins", sans-serif;
 }
+
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
@@ -85,7 +86,27 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+  font-weight: 550;
 }
+
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: rgba(0, 0, 0, .125);
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #6c5ce7;
+      color: white;
+    }
+
+    .accordion-button:hover {
+      background-color: #6c5ce7c9;
+    }
+
+    .accordion-button {
+      background-color: #6c5ce7c9;
+      color: white;
+    }
 
 /* PHP Email Form Messages
 ------------------------------*/
