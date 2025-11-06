@@ -29,21 +29,55 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Custom CSS for Accordion -->
+  <!-- Custom Styles for Tab Buttons -->
   <style>
-    /* Remove blue highlight and change accordion button colors */
-    .accordion-button:focus {
-      box-shadow: none;
-      border-color: grey;
+    .tab-buttons {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
     }
-    
-    .accordion-button:not(.collapsed) {
-      background-color: lightgray;
+  
+    .tab-button {
+      background: #ffffff;
+      border: 1px solid #d0d7de;
+      border-radius: 10px;
+      padding: 10px 22px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      font-family: "Poppins", sans-serif;
+    }
+  
+    .tab-button:hover {
+      background-color: #ff69618c;
+      border-color: #eb7c76;
       color: black;
     }
-    
-    .accordion-button:hover {
-      background-color: #e9ecef;
+  
+    .tab-button.active {
+      background-color: #ff6961;
+      color: white;
+      border-color: #ff6961;
+      box-shadow: 0 2px 8px rgba(255, 105, 97, 0.25);
+    }
+  
+    .tab-content {
+      display: none;
+      background: white;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+  
+    .tab-content.active {
+      display: block;
+    }
+  
+    .tableauPlaceholder {
+      width: 100%;
+      text-align: center;
     }
   </style>
 
@@ -122,46 +156,31 @@
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Overview</h2>
-        <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-          consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit
-          in iste officiis commodi quidem hic quas.</p>
+        <p>Vehicle demand in Singapore remains strong despite rising COE and a clear shift from
+        fuel-based to electric and hybrid vehicles.</p>
       </div><!-- End Stats Title -->
 
-      <div class='tableauPlaceholder' id='viz1761919856301' style='position: relative'><noscript><a href='#'><img
-              alt='Dashboard 2 '
-              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard2&#47;1_rss.png'
-              style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-          <param name='embed_code_version' value='3' />
-          <param name='site_root' value='' />
-          <param name='name' value='overview-coe&#47;Dashboard2' />
-          <param name='tabs' value='no' />
-          <param name='toolbar' value='yes' />
-          <param name='static_image'
-            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard2&#47;1.png' />
-          <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
-          <param name='language' value='en-GB' />
-          <param name='filter' value='publish=yes' />
-        </object></div>
-      <script
-        type='text/javascript'>                    var divElement = document.getElementById('viz1761919856301'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1150px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1150px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1127px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      <!-- Dashboard Navigation Buttons -->
+      <div class="container mb-4" data-aos="fade-up">
+        <div class="tab-buttons">
+          <button class="tab-button active" onclick="showDashboard(1)">COE Trends & Registrations</button>
+          <button class="tab-button" onclick="showDashboard(2)">PQP Market Trends</button>
+          <button class="tab-button" onclick="showDashboard(3)">Fuel Types & EV Trends</button>
+        </div>
+      </div>
 
-      <div class='tableauPlaceholder' id='viz1761919907302' style='position: relative'><noscript><a href='#'><img
-              alt='Dashboard 1 '
-              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard1&#47;1_rss.png'
+      <div class='tableauPlaceholder dashboard-container' id='viz1762267911942' data-dashboard="1" style='position: relative;'><noscript><a href='#'><img
+              alt='Dashboard 3 '
+              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard3&#47;1_rss.png'
               style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
           <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
           <param name='embed_code_version' value='3' />
           <param name='site_root' value='' />
-          <param name='name' value='overview-coe&#47;Dashboard1' />
+          <param name='name' value='overview-coe&#47;Dashboard3' />
           <param name='tabs' value='no' />
           <param name='toolbar' value='yes' />
           <param name='static_image'
-            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard1&#47;1.png' />
+            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard3&#47;1.png' />
           <param name='animate_transition' value='yes' />
           <param name='display_static_image' value='yes' />
           <param name='display_spinner' value='yes' />
@@ -171,45 +190,67 @@
           <param name='filter' value='publish=yes' />
         </object></div>
       <script
-        type='text/javascript'>                    var divElement = document.getElementById('viz1761919907302'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1150px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1150px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1177px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        type='text/javascript'>                    var divElement = document.getElementById('viz1762267911942'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '1100px'; vizElement.style.height = '827px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+        <div class='tableauPlaceholder dashboard-container' id='viz1762268295785' data-dashboard="2" style='position: relative;'><noscript><a href='#'><img
+                alt='Dashboard 3 (2) '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard32&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='overview-coe&#47;Dashboard32' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard32&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-GB' />
+            <param name='filter' value='publish=yes' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1762268295785'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '1100px'; vizElement.style.height = '827px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+          <div class='tableauPlaceholder dashboard-container' id='viz1762270727882' data-dashboard="3" style='position: relative'><noscript><a href='#'><img
+                  alt='Dashboard 1 '
+                  src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard1&#47;1_rss.png'
+                  style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+              <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+              <param name='embed_code_version' value='3' />
+              <param name='site_root' value='' />
+              <param name='name' value='overview-coe&#47;Dashboard1' />
+              <param name='tabs' value='no' />
+              <param name='toolbar' value='yes' />
+              <param name='static_image'
+                value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;ov&#47;overview-coe&#47;Dashboard1&#47;1.png' />
+              <param name='animate_transition' value='yes' />
+              <param name='display_static_image' value='yes' />
+              <param name='display_spinner' value='yes' />
+              <param name='display_overlay' value='yes' />
+              <param name='display_count' value='yes' />
+              <param name='language' value='en-GB' />
+              <param name='filter' value='publish=yes' />
+            </object></div>
+          <script
+            type='text/javascript'>                    var divElement = document.getElementById('viz1762270727882'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1100px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1100px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1127px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
 
       <!-- Insights UI for the embedded dashboard -->
-      <div id="dashboard-insights" class="container mt-5" data-aos="fade-up" data-aos-delay="80"
-        style="position: relative; margin: 0 auto; display: block;">
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Dashboard Insights</h2>
-        </div>
-
+      <section id="dashboard-insights" class="container mt-5 py-4" data-aos="fade-up" data-aos-delay="80">
+        <h3 class="mb-3 mt-5">Dashboard Insights</h3>
         <div data-aos="fade-up" data-aos-delay="100">
           <div id="insights-list" class="accordion">
-            <!-- Overall Insights -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading-overall">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapse-overall" aria-expanded="true" aria-controls="collapse-overall">
-                  Overall Insights
-                </button>
-              </h2>
-              <div id="collapse-overall" class="accordion-collapse collapse show" aria-labelledby="heading-overall"
-                data-bs-parent="#insights-list">
-                <div class="accordion-body">
-                  <p>Singapore’s car market demonstrates resilient demand sustained by rising incomes and constrained by
-                    government quota
-                    policies. While economic and policy factors introduce short-term volatility, the long-term upward
-                    trajectory of COE
-                    premiums and registrations reflects a persistent appetite for vehicle ownership, shaped by both
-                    affluence and regulatory
-                    design.</p>
-                </div>
-              </div>
-            </div>
 
             <!-- Sheet 1 Insights -->
             <div class="accordion-item">
               <h2 class="accordion-header" id="heading-sheet1">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapse-sheet1" aria-expanded="false" aria-controls="collapse-sheet1">
-                  Trend of Vehicle Registrations and COE Premiums
+                  Car Demand Stays Strong Despite Rising COE
                 </button>
               </h2>
               <div id="collapse-sheet1" class="accordion-collapse collapse" aria-labelledby="heading-sheet1"
@@ -237,7 +278,7 @@
               <h2 class="accordion-header" id="heading-sheet2">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapse-sheet2" aria-expanded="false" aria-controls="collapse-sheet2">
-                  COE Premiums VS Assessable Income
+                  Higher Incomes Fuel More Car Ownership
                 </button>
               </h2>
               <div id="collapse-sheet2" class="accordion-collapse collapse" aria-labelledby="heading-sheet2"
@@ -264,27 +305,22 @@
               <h2 class="accordion-header" id="heading-sheet3">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapse-sheet3" aria-expanded="false" aria-controls="collapse-sheet3">
-                  COE Premium VS Prevailing Quota Premium
+                  PQP Swings Reflect Market & Policy Shifts
                 </button>
               </h2>
               <div id="collapse-sheet3" class="accordion-collapse collapse" aria-labelledby="heading-sheet3"
                 data-bs-parent="#insights-list">
                 <div class="accordion-body">
-                  <p>The chart reveals a significant divergence between COE premiums (blue) and PQP values (green) over
-                    time. While premiums
-                    have shown steady growth from around $54,700 in 2014 to nearly $86,300 in 2024, the PQP values
-                    experienced dramatic
-                    volatility. Notably, PQP dropped sharply from 2014 — approximately $70,900 to historic lows around
-                    $33,800 during 2019,
-                    likely reflecting reduced vehicle demand during economic uncertainties. However, from 2022 onwards,
-                    both metrics surged
-                    substantially, with PQP climbing even more steeply than premiums—reaching $107,700 in 2023 before
-                    moderating to $97,400
-                    in 2024. This recent convergence and elevation suggests tightening COE supply coupled with strong
-                    post-pandemic vehicle
-                    demand, though the gap between the two metrics indicates some market pricing inefficiencies or
-                    temporal lags in quota
-                    allocation mechanisms.</p>
+                  <p>The chart reveals dramatic volatility in PQP (Prevailing Quota Premium) values over the past decade. PQP experienced a
+                  sharp decline from 2014, reaching its minimum of approximately $33,800 in 2019—a drop of over 50% from earlier levels.
+                  This historic low likely reflects several converging factors: reduced vehicle demand during economic uncertainties (COVID-19 Pandemic),
+                  potential oversupply in the COE quota system, and shifting consumer preferences as ride-hailing services gained
+                  prominence in Singapore.
+                  However, from 2022 onwards, PQP surged dramatically, climbing to its maximum of $107,700 in 2023 before moderating
+                  slightly to $97,400 in 2024. This remarkable recovery—more than tripling from the 2019 lows—can be attributed to several
+                  key drivers: post-pandemic pent-up vehicle demand as economic activity resumed, significant tightening of COE supply as
+                  part of Singapore's vehicle population control measures, supply chain disruptions affecting new vehicle availability,
+                  and strong economic recovery boosting purchasing power.</p>
                 </div>
               </div>
             </div>
@@ -294,7 +330,7 @@
               <h2 class="accordion-header" id="heading-sheet4">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapse-sheet4" aria-expanded="false" aria-controls="collapse-sheet4">
-                  Fuel Based Vehicles VS Electric Based Vehicles
+                  Shift from Fuel to Electric Vehicles
                 </button>
               </h2>
               <div id="collapse-sheet4" class="accordion-collapse collapse" aria-labelledby="heading-sheet4"
@@ -322,7 +358,7 @@
               <h2 class="accordion-header" id="heading-sheet5">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapse-sheet5" aria-expanded="false" aria-controls="collapse-sheet5">
-                  Trend of Fuel Types
+                  Rise of Hybrids and EVs Over Petrol Cars
                 </button>
               </h2>
               <div id="collapse-sheet5" class="accordion-collapse collapse" aria-labelledby="heading-sheet5"
@@ -350,7 +386,7 @@
               <h2 class="accordion-header" id="heading-sheet6">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapse-sheet6" aria-expanded="false" aria-controls="collapse-sheet6">
-                  Yearly Growth of Fuel Types
+                  Electric & Hybrid Growth, Petrol Decline
                 </button>
               </h2>
               <div id="collapse-sheet6" class="accordion-collapse collapse" aria-labelledby="heading-sheet6"
@@ -371,58 +407,32 @@
               </div>
             </div>
 
+              <!-- Overall Insights -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-overall">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-overall"
+                    aria-expanded="true" aria-controls="collapse-overall">
+                    Conclusion
+                  </button>
+                </h2>
+                <div id="collapse-overall" class="accordion-collapse collapse show" aria-labelledby="heading-overall"
+                  data-bs-parent="#insights-list">
+                  <div class="accordion-body">
+                    <p>Singapore’s car market demonstrates resilient demand sustained by rising incomes and constrained by
+                      government quota
+                      policies. While economic and policy factors introduce short-term volatility, the long-term upward
+                      trajectory of COE
+                      premiums and registrations reflects a persistent appetite for vehicle ownership, shaped by both
+                      affluence and regulatory
+                      design.</p>
+                  </div>
+                </div>
+              </div>
+
             <!-- Add more sheets as needed by copying the above structure -->
           </div>
-
         </div>
-      </div>
-
-
-
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-emoji-smile"></i>
-              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p><strong>Happy Clients</strong> <span>consequuntur quae</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-journal-richtext"></i>
-              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p><strong>Projects</strong> <span>adipisci atque cum quia aut</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-headset"></i>
-              <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p><strong>Hours Of Support</strong> <span>aut commodi quaerat</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-3 col-md-6">
-            <div class="stats-item">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
-                class="purecounter"></span>
-              <p><strong>Hard Workers</strong> <span>rerum asperiores dolor</span></p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
+      </section>
 
     </section><!-- /Stats Section -->
 
@@ -496,7 +506,7 @@
         <p>Analysis of sentiments related to COE.</p>
       </div><!-- End Section Title -->
 
-      <div class='tableauPlaceholder' id='viz1761920016946' style='position: relative'><noscript><a href='#'><img
+      <div class='tableauPlaceholder' id='viz1762274189088' style='position: relative'><noscript><a href='#'><img
               alt='Sentiment Analysis Dashboard '
               src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;sentiment-analysis-coe&#47;SentimentAnalysisDashboard&#47;1_rss.png'
               style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
@@ -517,7 +527,30 @@
           <param name='filter' value='publish=yes' />
         </object></div>
       <script
-        type='text/javascript'>                    var divElement = document.getElementById('viz1761920016946'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1165px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1165px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1027px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        type='text/javascript'>                    var divElement = document.getElementById('viz1762274189088'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1100px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1100px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1027px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+        <div class='tableauPlaceholder' id='viz1762274325652' style='position: relative'><noscript><a href='#'><img
+                alt='Dashboard 2 '
+                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;sentiment-analysis-coe&#47;Dashboard2&#47;1_rss.png'
+                style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='sentiment-analysis-coe&#47;Dashboard2' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image'
+              value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;sentiment-analysis-coe&#47;Dashboard2&#47;1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-GB' />
+            <param name='filter' value='publish=yes' />
+          </object></div>
+        <script
+          type='text/javascript'>                    var divElement = document.getElementById('viz1762274325652'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1100px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1100px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
       <!-- Insights -->
       <div class="container mt-5" data-aos="fade-up" data-aos-delay="80">
@@ -528,42 +561,6 @@
 
         <div class="mt-3" data-aos="fade-up" data-aos-delay="100">
           <div id="sentiment-insights-list" class="accordion">
-            <!-- Overall Insights -->
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="heading-sentiment-overall">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#collapse-sentiment-overall" aria-expanded="true"
-                  aria-controls="collapse-sentiment-overall">
-                  Overall Insights
-                </button>
-              </h2>
-              <div id="collapse-sentiment-overall" class="accordion-collapse collapse show"
-                aria-labelledby="heading-sentiment-overall" data-bs-parent="#sentiment-insights-list">
-                <div class="accordion-body">
-                  <p>Public sentiment surrounding COE prices is predominantly negative, with over 65% of comments
-                    expressing dissatisfaction
-                    or concern. This suggests that discussions about COE are emotionally charged, reflecting frustration
-                    over persistently
-                    high premiums and perceived market unfairness.
-
-                    A sharp dip in sentiment around March 2025 coincides with expectations of price relief that did not
-                    materialize, as both
-                    COE premiums and PQP values remained elevated despite increased supply. However, sentiment improved
-                    slightly in April
-                    2025 following announcements of a higher COE quota, signalling cautious optimism that prices might
-                    stabilize in the
-                    future.
-
-                    The relationship between sentiment intensity and engagement further reveals that negative opinions
-                    attract the most
-                    attention and interaction, indicating that frustration and criticism drive stronger public
-                    engagement. This pattern
-                    underscores how consumer sentiment is deeply tied to price perceptions and policy responses, with
-                    negative sentiment
-                    acting as a signal of public concern and potential pressure for market or policy adjustments.</p>
-                </div>
-              </div>
-            </div>
 
             <!-- Sheet 1 Insights -->
             <div class="accordion-item">
@@ -661,33 +658,32 @@
               </div>
             </div>
 
+            <!-- Overall Insights -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-sentiment-overall">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse-sentiment-overall" aria-expanded="true" aria-controls="collapse-sentiment-overall">
+                  Conclusion
+                </button>
+              </h2>
+              <div id="collapse-sentiment-overall" class="accordion-collapse collapse show"
+                aria-labelledby="heading-sentiment-overall" data-bs-parent="#sentiment-insights-list">
+                <div class="accordion-body">
+                  <p>Public sentiment on COE prices is largely negative, with over 65% of comments expressing frustration over high
+                    premiums
+                    and perceived market unfairness. Sentiment dipped sharply in March 2025 when expected price relief did not
+                    occur, then
+                    improved slightly in April following announcements of a higher COE quota. Negative opinions drive the most
+                    engagement,
+                    highlighting how consumer sentiment is closely tied to price perceptions and policy responses.</p>
+                </div>
+              </div>
+            </div>
+
             <!-- Add more sheets as needed by copying the above structure -->
           </div>
         </div>
       </div>
-
-      <div class='tableauPlaceholder' id='viz1761907840948' style='position: relative; margin: 0 auto; display: block;'>
-        <noscript><a href='#'><img alt='Key Drivers of Negative Sentiments '
-              src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;sentiment-analysis-coe&#47;KeyDriversofNegativeSentiments&#47;1_rss.png'
-              style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-          <param name='embed_code_version' value='3' />
-          <param name='site_root' value='' />
-          <param name='name' value='sentiment-analysis-coe&#47;KeyDriversofNegativeSentiments' />
-          <param name='tabs' value='no' />
-          <param name='toolbar' value='yes' />
-          <param name='static_image'
-            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;sentiment-analysis-coe&#47;KeyDriversofNegativeSentiments&#47;1.png' />
-          <param name='animate_transition' value='yes' />
-          <param name='display_static_image' value='yes' />
-          <param name='display_spinner' value='yes' />
-          <param name='display_overlay' value='yes' />
-          <param name='display_count' value='yes' />
-          <param name='language' value='en-GB' />
-          <param name='filter' value='publish=yes' />
-        </object></div>
-      <script
-        type='text/javascript'>                    var divElement = document.getElementById('viz1761907840948'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '100%'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 
       <!-- Key Drivers Insights -->
       <div class="container mt-5" data-aos="fade-up" data-aos-delay="80">
@@ -768,6 +764,41 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<!-- Dashboard Navigation Script -->
+<script>
+  function showDashboard(dashboardNum) {
+    // Hide all dashboards
+    const dashboards = document.querySelectorAll('.dashboard-container');
+    dashboards.forEach(dashboard => {
+      dashboard.style.display = 'none';
+    });
+
+    // Show selected dashboard
+    const selectedDashboard = document.querySelector(`[data-dashboard="${dashboardNum}"]`);
+    if (selectedDashboard) {
+      selectedDashboard.style.display = 'block';
+    }
+
+    // Update button states
+    const buttons = document.querySelectorAll('.tab-button');
+    buttons.forEach((btn, index) => {
+      if (index + 1 === dashboardNum) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
+
+  // Initialize: Show only the first dashboard on page load
+  window.addEventListener('load', function () {
+    // Small delay to ensure Tableau embeds are loaded
+    setTimeout(function () {
+      showDashboard(1);
+    }, 100);
+  });
+</script>
 
 </body>
 
