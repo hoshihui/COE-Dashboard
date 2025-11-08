@@ -100,8 +100,8 @@
             <li><a href="government.html">Government</a></li>
           </ul>
         </li>
-        <li><a href="index.html#sentiment-analysis"><i class="bi bi-images navicon"></i> Sentiment
-          Analysis</a></li>
+        <li><a href="https://index.html/#sentiment-analysis"><i class="bi bi-images navicon"></i> Sentiment
+            Analysis</a></li>
       </ul>
     </nav>
 
@@ -137,9 +137,8 @@
             <!-- ====== TAB SECTION ====== -->
             <div class="tab-buttons">
               <button class="tab-button active" onclick="openTab(event, 'tab1')">Buyer Dashboard</button>
-              <button class="tab-button" onclick="openTab(event, 'tab3')">Seller Dashboard</button>
+              <button class="tab-button" onclick="openTab(event, 'tab2')">Market Overview</button>
             </div>
-
 
             <!-- TAB 1 -->
             <div id="tab1" class="tab-content active">
@@ -197,7 +196,7 @@
 
               <!-- Dashboard Insights for TAB 1 -->
               <section class="py-4" class="dashboard-insight-section">
-                <h3 class="mb-3 mt-5">Buyer Insights</h3>
+                <h3 class="mb-3 mt-5">Dashboard Insights</h3>
                 <div class="accordion" id="accordionTab1">
 
                   <div class="accordion-item">
@@ -359,228 +358,39 @@
               </section>
             </div>
 
-            <!-- TAB 3 -->
-            <div id="tab3" class="tab-content">
-              <!-- Sellers: Dashboard 1 (first) -->
-              <div class="tableauPlaceholder" id="viz1762272912636" style="position: relative">
-                <noscript>
-                  <a href="#"><img alt="Dashboard 1" src="https://public.tableau.com/static/images/Se/SellersPredictedExtract/Dashboard1/1_rss.png" style="border: none" /></a>
-                </noscript>
-                <object class="tableauViz" style="display:none;">
-                  <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-                  <param name="embed_code_version" value="3" />
-                  <param name="site_root" value="" />
-                  <param name="name" value="SellersPredictedExtract/Dashboard1" />
-                  <param name="tabs" value="no" />
-                  <param name="toolbar" value="yes" />
-                  <param name="static_image" value="https://public.tableau.com/static/images/Se/SellersPredictedExtract/Dashboard1/1.png" />
-                  <param name="animate_transition" value="yes" />
-                  <param name="display_static_image" value="yes" />
-                  <param name="display_spinner" value="yes" />
-                  <param name="display_overlay" value="yes" />
-                  <param name="display_count" value="yes" />
-                  <param name="language" value="en-US" />
-                  <param name="filter" value="publish=yes" />
-                </object>
+            <!-- TAB 2 -->
+            <div id="tab2" class="tab-content">
+              <!-- Chart -->
+              <div class="tableauPlaceholder" id="viz1761978869258" style="position: relative">
+                <!-- Tableau embed code -->
               </div>
 
-              <!-- Sellers: Dashboard 2 (second) -->
-              <div class="tableauPlaceholder mt-5" id="viz1762272954391" style="position: relative">
-                <noscript>
-                  <a href="#"><img alt="Dashboard 2" src="https://public.tableau.com/static/images/Se/SellersPredictedExtract/Dashboard2/1_rss.png" style="border: none" /></a>
-                </noscript>
-                <object class="tableauViz" style="display:none;">
-                  <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
-                  <param name="embed_code_version" value="3" />
-                  <param name="site_root" value="" />
-                  <param name="name" value="SellersPredictedExtract/Dashboard2" />
-                  <param name="tabs" value="no" />
-                  <param name="toolbar" value="yes" />
-                  <param name="static_image" value="https://public.tableau.com/static/images/Se/SellersPredictedExtract/Dashboard2/1.png" />
-                  <param name="animate_transition" value="yes" />
-                  <param name="display_static_image" value="yes" />
-                  <param name="display_spinner" value="yes" />
-                  <param name="display_overlay" value="yes" />
-                  <param name="display_count" value="yes" />
-                  <param name="language" value="en-GB" />
-                  <param name="filter" value="publish=yes" />
-                </object>
-              </div>
-
-              <!-- Dashboard Insights for TAB 3 -->
-              <section class="py-4" class="dashboard-insight-section">
-                <h3 class="mb-3 mt-5">Seller Insights</h3>
-                <div class="accordion" id="accordionTab3">
-
-                  <!-- INSIGHT 1 -->
+              <!-- Dashboard Insights for TAB 2 -->
+              <section class="py-4">
+                <h3 class="mb-3">Dashboard Insights</h3>
+                <div class="accordion" id="accordionTab2">
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingPremiumQuota">
+                    <h2 class="accordion-header" id="headingMarketTab2">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapsePremiumQuota" aria-expanded="true" aria-controls="collapsePremiumQuota">
-                        COE Premium & Quota Predicted
+                        data-bs-target="#collapseMarketTab2" aria-expanded="true" aria-controls="collapseMarketTab2">
+                        Key Insights from Market Overview
                       </button>
                     </h2>
-                    <div id="collapsePremiumQuota" class="accordion-collapse collapse show"
-                      aria-labelledby="headingPremiumQuota" data-bs-parent="#accordionTab3">
+                    <div id="collapseMarketTab2" class="accordion-collapse collapse show"
+                      aria-labelledby="headingMarketTab2" data-bs-parent="#accordionTab2">
                       <div class="accordion-body">
                         <ul>
-                          <li><b>Premium Projection:</b> The COE premium trend from <b>2010–2024</b> shows pronounced cyclical
-                            fluctuations, peaking near <b>$150,000</b> during 2024 after previous highs in 2013–2014. This reflects
-                            constrained quota supply and intensified post-pandemic demand from private owners and ride-hailing
-                            fleets.</li>
-                          <li>Model projections beyond 2025 suggest a plateau between <b>$120,000–$150,000</b> through 2035 — indicating
-                            that without major policy changes, COE prices will remain high. Sellers can expect <b>strong resale
-                              leverage</b> as replacement costs stay elevated.</li>
-                          <li><b>Quota Forecast:</b> Quotas rose sharply between 2015–2018 (peaking at around <b>1,350 certificates</b>)
-                            before contracting to <b>below 500</b> in 2022. Projections from 2025 onward show a modest recovery to
-                            about <b>700–800 certificates</b> per period, followed by a slow decline.</li>
-                          <li>This stabilization signals a <b>low-supply equilibrium</b>: deregistrations remain limited, keeping demand
-                            pressure high. As a result, <b>COE premiums are projected to stay firm</b>, reinforcing seller advantages in
-                            the used-car market.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- INSIGHT 2 -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingQuotaPremium">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseQuotaPremium" aria-expanded="false" aria-controls="collapseQuotaPremium">
-                        Quota vs Premium Relationship
-                      </button>
-                    </h2>
-                    <div id="collapseQuotaPremium" class="accordion-collapse collapse"
-                      aria-labelledby="headingQuotaPremium" data-bs-parent="#accordionTab3">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>The scatter plot reveals a <b>clear negative correlation</b> between COE quota and premium. When quotas
-                            increase, premiums tend to fall — and vice versa.</li>
-                          <li>In recent high-premium years (2022–2024), quotas fell to <b>under 600</b>. In contrast, the lower-premium
-                            years (2016–2018) corresponded to quotas exceeding <b>1,200</b> certificates.</li>
-                          <li>Regression lines confirm this inverse relationship for both <b>Category A and B</b>. Limited supply has
-                            been the key driver of elevated prices rather than over-demand alone.</li>
-                          <li><b>For sellers:</b> price drops are only likely if the government releases a substantial quota increase or
-                            if a large wave of deregistrations occurs. Until then, high COE premiums will sustain vehicle resale values.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- INSIGHT 3 -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingHottestCat">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseHottestCat" aria-expanded="false" aria-controls="collapseHottestCat">
-                        Hottest Category Trend
-                      </button>
-                    </h2>
-                    <div id="collapseHottestCat" class="accordion-collapse collapse"
-                      aria-labelledby="headingHottestCat" data-bs-parent="#accordionTab3">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>The heat-score combines <b>demand strength (bids per quota)</b> and <b>price momentum (COE rate of
-                              change)</b> to measure how “hot” each market segment is.</li>
-                          <li>Between <b>2024–2026</b>, <b>Category B</b> shows the strongest demand — dark-red zones reflect aggressive
-                            bidding from luxury and private owners. <b>Category A</b> remains warm but comparatively stable, showing
-                            moderate demand and consistent turnover.</li>
-                          <li>Historically, spikes in Category B heat intensity (2012–2014 and 2022) align with COE surges beyond
-                            <b>$100,000</b>. This reinforces the trend that Category B premiums react faster and stronger to market
-                            shocks.</li>
-                          <li><b>Implication:</b> Category B sellers currently hold the <b>strongest leverage</b> in the market,
-                            benefiting from both high resale prices and sustained buyer demand. Category A sellers can capitalize on
-                            <b>faster transaction cycles</b> given their affordability relative to Category B.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- INSIGHT 4 -->
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingSellerConclusion">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseSellerConclusion" aria-expanded="false"
-                        aria-controls="collapseSellerConclusion">
-                        Key Takeaways for Sellers
-                      </button>
-                    </h2>
-                    <div id="collapseSellerConclusion" class="accordion-collapse collapse"
-                      aria-labelledby="headingSellerConclusion" data-bs-parent="#accordionTab3">
-                      <div class="accordion-body">
-                        <ul>
-                          <li><b>Resale values</b> are expected to remain strong through <b>2030</b> as COE premiums stabilize near
-                            historical highs.</li>
-                          <li><b>Sellers of Category B vehicles</b> can secure peak returns in the next 1–2 years before potential quota
-                            normalization.</li>
-                          <li><b>Monitor quota releases</b> — any jump above <b>900 certificates</b> per bidding window may trigger a
-                            <b>15%+ premium correction</b>.</li>
-                          <li><b>Timing strategy:</b> Consider listing or trading vehicles <b>before major deregistration waves</b>,
-                            when premiums are at their peak and replacement costs are highest.</li>
+                          <li>The market is highly competitive, with small price differences driving buyer decisions.
+                          </li>
+                          <li>Government policies are influencing category affordability trends.</li>
+                          <li>Market growth is concentrated in Tier 1 and Tier 2 cities, with strong online adoption.
+                          </li>
                         </ul>
                       </div>
                     </div>
                   </div>
                 </div>
               </section>
-
-
-              <!-- One-time loader + responsive sizing for both -->
-              <script type="text/javascript">
-                (function () {
-                  // Size rules matching your originals
-                  function sizeDash1(div, viz) {
-                    if (div.offsetWidth > 800) {
-                      viz.style.width = '1100px';
-                      viz.style.height = '827px';
-                    } else if (div.offsetWidth > 500) {
-                      viz.style.width = '1100px';
-                      viz.style.height = '827px';
-                    } else {
-                      viz.style.width = '100%';
-                      viz.style.height = '877px';
-                    }
-                  }
-
-                  function sizeDash2(div, viz) {
-                    if (div.offsetWidth > 800) {
-                      viz.style.minWidth = '1100px';
-                      viz.style.maxWidth = '1150px';
-                      viz.style.width = '100%';
-                      viz.style.height = '827px';
-                    } else if (div.offsetWidth > 500) {
-                      viz.style.minWidth = '1100px';
-                      viz.style.maxWidth = '1150px';
-                      viz.style.width = '100%';
-                      viz.style.height = '827px';
-                    } else {
-                      viz.style.width = '100%';
-                      viz.style.height = '777px';
-                    }
-                  }
-
-                  // Apply sizes now and on resize
-                  var d1 = document.getElementById('viz1762272912636');
-                  var v1 = d1.getElementsByTagName('object')[0];
-                  var d2 = document.getElementById('viz1762272954391');
-                  var v2 = d2.getElementsByTagName('object')[0];
-
-                  function onResize() {
-                    sizeDash1(d1, v1);
-                    sizeDash2(d2, v2);
-                  }
-                  onResize();
-                  window.addEventListener('resize', onResize);
-
-                  // Load Tableau API once
-                  if (!document.getElementById('tableau-api')) {
-                    var scriptElement = document.createElement('script');
-                    scriptElement.id = 'tableau-api';
-                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                    // Insert before the first viz object
-                    v1.parentNode.insertBefore(scriptElement, v1);
-                  }
-                })();
-              </script>
             </div>
 
           </div>
@@ -589,17 +399,6 @@
     </section><!-- /Portfolio Details Section -->
   </main>
 
-  <footer id="footer" class="footer position-relative light-background">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights Reserved</span>
-        </p>
-      </div>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer>
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
