@@ -137,7 +137,7 @@
             <!-- ====== TAB SECTION ====== -->
             <div class="tab-buttons">
               <button class="tab-button active" onclick="openTab(event, 'tab1')">Buyer Dashboard</button>
-              <button class="tab-button" onclick="openTab(event, 'tab2')">Market Overview</button>
+               <button class="tab-button" onclick="openTab(event, 'tab3')">Seller Dashboard</button>
             </div>
 
             <!-- TAB 1 -->
@@ -190,6 +190,45 @@
                 <script
                   type='text/javascript'>                    var divElement = document.getElementById('viz1762176215759'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.width = '1100px'; vizElement.style.height = '827px'; } else if (divElement.offsetWidth > 500) { vizElement.style.width = '1100px'; vizElement.style.height = '827px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '1177px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
               </div>
+              <!-- ===== COE FORECAST DASHBOARD (NEW) ===== -->
+              <div class='tableauPlaceholder' id='viz1762623882140' style='position: relative'>
+                <noscript>
+                  <a href='#'>
+                    <img alt='COE Forecast' 
+                        src='https://public.tableau.com/static/images/CO/COEForecast1/COEForecast/1_rss.png' 
+                        style='border: none' />
+                  </a>
+                </noscript>
+                <object class='tableauViz' style='display:none;'>
+                  <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                  <param name='embed_code_version' value='3' />
+                  <param name='site_root' value='' />
+                  <param name='name' value='COEForecast1/COEForecast' />
+                  <param name='tabs' value='no' />
+                  <param name='toolbar' value='yes' />
+                  <param name='static_image' 
+                        value='https://public.tableau.com/static/images/CO/COEForecast1/COEForecast/1.png' />
+                  <param name='animate_transition' value='yes' />
+                  <param name='display_static_image' value='yes' />
+                  <param name='display_spinner' value='yes' />
+                  <param name='display_overlay' value='yes' />
+                  <param name='display_count' value='yes' />
+                  <param name='language' value='en-GB' />
+                  <param name='filter' value='publish=yes' />
+                </object>
+              </div>
+              <script type='text/javascript'>
+                var divElement = document.getElementById('viz1762623882140');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                vizElement.style.width = '100%';
+                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
+              <br>
+              <p><b>Note:</b> R2: 0.3856 MAE: $7,625.89 | You can expect the actual price to differ by ~7,625.89</p>
+
               <div class='tableauPlaceholder' id='viz1762172148672' style='position: relative'>
                 <!-- Tableau embed code -->
               </div>
@@ -358,39 +397,189 @@
               </section>
             </div>
 
-            <!-- TAB 2 -->
-            <div id="tab2" class="tab-content">
-              <!-- Chart -->
-              <div class="tableauPlaceholder" id="viz1761978869258" style="position: relative">
-                <!-- Tableau embed code -->
+            <!-- TAB 3 (New Seller Tab) -->
+            <div id="tab3" class="tab-content">
+              <!-- Seller Dashboards -->
+              <div class="tableauPlaceholder" id="viz1762622580222" style="position: relative">
+                <noscript>
+                  <a href="#">
+                    <img alt="Dashboard 3"
+                      src="https://public.tableau.com/static/images/Se/SellersPredictedExtract/Dashboard3/1_rss.png"
+                      style="border:none" />
+                  </a>
+                </noscript>
+                <object class="tableauViz" style="display:none;">
+                  <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                  <param name="embed_code_version" value="3" />
+                  <param name="site_root" value="" />
+                  <param name="name" value="SellersPredictedExtract/Dashboard3" />
+                  <param name="tabs" value="no" />
+                  <param name="toolbar" value="yes" />
+                  <param name="static_image"
+                    value="https://public.tableau.com/static/images/Se/SellersPredictedExtract/Dashboard3/1.png" />
+                  <param name="animate_transition" value="yes" />
+                  <param name="display_static_image" value="yes" />
+                  <param name="display_spinner" value="yes" />
+                  <param name="display_overlay" value="yes" />
+                  <param name="display_count" value="yes" />
+                  <param name="language" value="en-US" />
+                  <param name="filter" value="publish=yes" />
+                </object>
               </div>
+              <script type="text/javascript">
+                var divElement = document.getElementById('viz1762622580222');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if (divElement.offsetWidth > 800) {
+                  vizElement.style.width = '1000px';
+                  vizElement.style.height = '827px';
+                } else if (divElement.offsetWidth > 500) {
+                  vizElement.style.width = '1000px';
+                  vizElement.style.height = '827px';
+                } else {
+                  vizElement.style.width = '100%';
+                  vizElement.style.height = '777px';
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
 
-              <!-- Dashboard Insights for TAB 2 -->
+              <div class="tableauPlaceholder" id="viz1762622630789" style="position: relative">
+                <noscript>
+                  <a href="#">
+                    <img alt="Dashboard 2"
+                      src="https://public.tableau.com/static/images/Se/SellersPredictedExtract/Dashboard2/1_rss.png"
+                      style="border:none" />
+                  </a>
+                </noscript>
+                <object class="tableauViz" style="display:none;">
+                  <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+                  <param name="embed_code_version" value="3" />
+                  <param name="site_root" value="" />
+                  <param name="name" value="SellersPredictedExtract/Dashboard2" />
+                  <param name="tabs" value="no" />
+                  <param name="toolbar" value="yes" />
+                  <param name="static_image"
+                    value="https://public.tableau.com/static/images/Se/SellersPredictedExtract/Dashboard2/1.png" />
+                  <param name="animate_transition" value="yes" />
+                  <param name="display_static_image" value="yes" />
+                  <param name="display_spinner" value="yes" />
+                  <param name="display_overlay" value="yes" />
+                  <param name="display_count" value="yes" />
+                  <param name="language" value="en-GB" />
+                  <param name="filter" value="publish=yes" />
+                </object>
+              </div>
+              <script type="text/javascript">
+                var divElement = document.getElementById('viz1762622630789');
+                var vizElement = divElement.getElementsByTagName('object')[0];
+                if (divElement.offsetWidth > 800) {
+                  vizElement.style.width = '1100px';
+                  vizElement.style.height = '827px';
+                } else if (divElement.offsetWidth > 500) {
+                  vizElement.style.width = '1100px';
+                  vizElement.style.height = '827px';
+                } else {
+                  vizElement.style.width = '100%';
+                  vizElement.style.height = '777px';
+                }
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+              </script>
+
+              <!-- Dashboard Insights -->
               <section class="py-4">
-                <h3 class="mb-3">Dashboard Insights</h3>
-                <div class="accordion" id="accordionTab2">
+                <h3 class="mb-3 mt-4">Dashboard Insights</h3>
+                <div class="accordion" id="accordionTab3">
+
+                  <!-- Premium & Quota Trends -->
                   <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingMarketTab2">
+                    <h2 class="accordion-header" id="headingTrendsTab3">
                       <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseMarketTab2" aria-expanded="true" aria-controls="collapseMarketTab2">
-                        Key Insights from Market Overview
+                        data-bs-target="#collapseTrendsTab3" aria-expanded="true" aria-controls="collapseTrendsTab3">
+                        Premium & Quota Trends
                       </button>
                     </h2>
-                    <div id="collapseMarketTab2" class="accordion-collapse collapse show"
-                      aria-labelledby="headingMarketTab2" data-bs-parent="#accordionTab2">
+                    <div id="collapseTrendsTab3" class="accordion-collapse collapse show"
+                      aria-labelledby="headingTrendsTab3" data-bs-parent="#accordionTab3">
                       <div class="accordion-body">
                         <ul>
-                          <li>The market is highly competitive, with small price differences driving buyer decisions.
-                          </li>
-                          <li>Government policies are influencing category affordability trends.</li>
-                          <li>Market growth is concentrated in Tier 1 and Tier 2 cities, with strong online adoption.
-                          </li>
+                          <li><b>Premiums:</b> Category B rose from about <b>$19,190</b> (2010) to roughly <b>$136,890</b> (latest) — near record highs after a sharp 2022–2023 run-up, brief dip, then recovery.</li>
+                          <li><b>Sell signal:</b> The chart flags a recent <b>Sell Zone</b> around a local peak, indicating an attractive exit window for sellers.</li>
+                          <li><b>Quotas:</b> Annual COE supply climbed to ~<b>31–33K</b> (2016–2018) then fell to ~<b>12–16K</b> by 2024–2025, tightening the market and supporting higher prices.</li>
                         </ul>
                       </div>
                     </div>
                   </div>
+
+                  <!-- Quota vs Premium Relationship -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingCorrTab3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseCorrTab3" aria-expanded="false" aria-controls="collapseCorrTab3">
+                        Quota vs Premium Relationship
+                      </button>
+                    </h2>
+                    <div id="collapseCorrTab3" class="accordion-collapse collapse"
+                      aria-labelledby="headingCorrTab3" data-bs-parent="#accordionTab3">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>The scatter + regression lines show a <b>clear inverse relationship</b>: more quota → lower premiums, and vice versa.</li>
+                          <li>When annual quota was <b>~25–30K+</b> (e.g., 2016–2018), premiums were comparatively subdued.</li>
+                          <li>When quota tightened to <b>~15K or below</b> (2022–2024), premiums surged, often > <b>$100K</b> for Category B.</li>
+                          <li><b>Implication for sellers:</b> Resale prices should remain supported unless there’s a material, sustained quota expansion or a large deregistration wave.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Hottest Category Trend -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingHeatTab3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseHeatTab3" aria-expanded="false" aria-controls="collapseHeatTab3">
+                        Hottest Category Trend
+                      </button>
+                    </h2>
+                    <div id="collapseHeatTab3" class="accordion-collapse collapse"
+                      aria-labelledby="headingHeatTab3" data-bs-parent="#accordionTab3">
+                      <div class="accordion-body">
+                        <ul>
+                          <li>The heat map highlights <b>Category B</b> as the “hottest” segment during <b>2012–2014</b> and again in <b>2022–2024</b>, aligning with premium spikes beyond <b>$100K</b>.</li>
+                          <li><b>Category A</b> remains warm but steadier, indicating moderate demand and smoother turnover.</li>
+                          <li><b>Sensitivity:</b> Category B reacts faster and more strongly to market shocks, amplifying upside during tight supply.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Key Takeaways for Sellers -->
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTakeTab3">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTakeTab3" aria-expanded="false" aria-controls="collapseTakeTab3">
+                        Key Takeaways for Sellers
+                      </button>
+                    </h2>
+                    <div id="collapseTakeTab3" class="accordion-collapse collapse"
+                      aria-labelledby="headingTakeTab3" data-bs-parent="#accordionTab3">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><b>Favorable environment:</b> Tight quotas and elevated premiums support strong resale values.</li>
+                          <li><b>Leverage:</b> Category B owners have the strongest pricing power now; Category A sellers benefit from faster transaction cycles.</li>
+                          <li><b>What to watch:</b> LTA quota announcements. A sustained move back toward <b>~25–30K+</b> annually would likely cool premiums.</li>
+                          <li><b>Timing:</b> Consider listing when the dashboard flags a <b>Sell Zone</b> near peaks and before visible quota resets or large deregistration waves.</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </section>
+
+                        
+
             </div>
 
           </div>
